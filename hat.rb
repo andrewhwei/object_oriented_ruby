@@ -1,29 +1,19 @@
 class Hat
 
-  def initialize(color, size, price)
-    @color = color
-    @size = size
-    @price = price
-  end
+  attr_accessor :color, :size, :price
 
-  def color
-    return @color
-  end
-
-  def size
-    return @size
-  end
-
-  def price
-    return @price
+  def initialize(attributes)
+    @color = attributes[:color]
+    @size = attributes[:size]
+    @price = attributes[:price]
   end
 
 end
 
-blue_hat = Hat.new("blue", "small", 20)
-red_hat = Hat.new("red", "medium", 30)
-green_hat = Hat.new("green", "large", 35)
+blue_hat = Hat.new({color: "blue", size: "small", price: 20.00})
+red_hat = Hat.new({color: "red", size: "medium", price: 30.00})
+green_hat = Hat.new({color: "green", size: "large", price: 35.00})
 p blue_hat
 p red_hat
 p green_hat
-puts blue_hat.color
+p blue_hat.price
