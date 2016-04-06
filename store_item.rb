@@ -18,3 +18,4 @@ hats = [
 
 p hats
 puts hats[0][:color]
+puts hats[1][:color]
